@@ -19,7 +19,7 @@ html, body, p {
 
 .display {
     display: flex;
-    flex-wrap: nowrap;
+    overflow: hidden;
     justify-content: flex-end;
     align-items: center;
     background-color: #bdcc79;
@@ -27,8 +27,8 @@ html, body, p {
     font-size: 64px;
     width: 100%;
     height: 100px;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
     border-radius: 20px;
     margin-bottom: 25px;
 }
@@ -47,16 +47,20 @@ html, body, p {
     align-items: center;
     color: white;
     background-color: #7c7c7c;
+    box-shadow: 0 0 4px black;
     font-size: 42px;
     padding: 10px;
+    transition: ease 0.5s;
+    outline: none;
+    border: none;
 }
 
-.key:hover{
+.key:hover {
     cursor: pointer;
 }
 
-#equals {
-    background-color: orangered;
+.key:active {
+    box-shadow: none;
 }
 
 #clear, #divide, #multiply, #delete {
@@ -73,9 +77,9 @@ html, body, p {
 }
 
 #equals {
+    background-color: orangered;
     grid-column-start: 4;
     grid-column-end: 4;
-
     grid-row-start: 4;
     grid-row-end: 6;
 }
