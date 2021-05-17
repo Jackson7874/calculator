@@ -28,6 +28,7 @@ html, body, p {
     width: 100%;
     height: 100px;
     padding-right: 20px;
+    padding-left: 20px;
     border-radius: 20px;
     margin-bottom: 25px;
 }
@@ -35,7 +36,7 @@ html, body, p {
 .keypad {
     display: grid;
     gap: 15px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     width: 100%;
     height: 400px;
 }
@@ -58,6 +59,23 @@ html, body, p {
     background-color: orangered;
 }
 
-#clear, #divide, #multiply {
+#clear, #divide, #multiply, #delete {
     background-color: #525252;
+}
+
+#clear, #delete {
+    font-size: 20px;
+}
+
+#box0 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#equals {
+    grid-column-start: 4;
+    grid-column-end: 4;
+
+    grid-row-start: 4;
+    grid-row-end: 6;
 }
